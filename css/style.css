@@ -1,0 +1,728 @@
+@media screen and (max-width: 1010px) {
+  .logo {
+    display: none;
+  }
+
+  .logoli {
+    display: none;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul a li {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #646464;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  }
+
+  #text1,
+  #text2 {
+    font-size: 20pt;
+  }
+
+  .timeline ul {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .timeline ul li {
+    margin: 10px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .arrow {
+    animation-name: arrow-up;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes arrow-up {
+    0% {
+      transform: rotate(90deg) scale(2) translate(20px);
+    }
+    100% {
+      display: none;
+      transform: rotate(90deg) scale(2) translate(-20px);
+    }
+  }
+
+  .trabajos {
+    text-align: center;
+  }
+
+  .trabajo {
+    animation-name: slideshow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  .trabajo img {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+  }
+
+  .trabajo img:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+  }
+
+  .slide-indicador {
+    display: none;
+  }
+  .slide-control {
+    display: none;
+  }
+
+  .slide-item {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  }
+  .contacto {
+    width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (min-width: 1010px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul a li {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #646464;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  }
+
+  nav ul a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+  #text1,
+  #text2 {
+    font-size: 30pt;
+  }
+
+  .sobre-mi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+    animation-name: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes arrow {
+    0% {
+      transform: translate(110px) scale(3);
+    }
+    100% {
+      display: none;
+      transform: translate(-110px) scale(3);
+    }
+  }
+
+  .line {
+    display: none;
+  }
+
+  .line p {
+    padding: 2px;
+  }
+  .timeline ul li {
+    width: auto;
+    margin: 10px;
+    z-index: 10;
+  }
+
+  .timeline ul li:hover {
+    transform: scale(1.1);
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  .timeline ul li:hover > .line {
+    display: block;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #000;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+  }
+
+  .trabajos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 5px;
+  }
+
+  .trabajo img {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+  }
+
+  .slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+  }
+
+  .slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+  }
+
+  .slide-item {
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  .slide-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+  }
+
+  .slide-control.prev {
+    left: 2%;
+  }
+
+  .slide-control.next {
+    right: 2%;
+  }
+
+  .slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+  }
+
+  #slide-1:checked ~ .control-1,
+  #slide-2:checked ~ .control-2,
+  #slide-3:checked ~ .control-3 {
+    display: block;
+  }
+
+  .slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+  }
+
+  .slide-circulo:hover {
+    color: #aaaaaa;
+  }
+
+  #slide-1:checked
+    ~ .control-1
+    ~ .slide-indicador
+    li:nth-child(1)
+    .slide-circulo,
+  #slide-2:checked
+    ~ .control-2
+    ~ .slide-indicador
+    li:nth-child(2)
+    .slide-circulo,
+  #slide-3:checked
+    ~ .control-3
+    ~ .slide-indicador
+    li:nth-child(3)
+    .slide-circulo {
+    color: #428bca;
+  }
+
+  #titulo {
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+      -1px 0px 2px rgba(255, 255, 255, 0);
+  }
+
+  #descripcion {
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
+      -1px 0px 2px rgba(255, 255, 255, 0);
+  }
+
+  .contacto {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+/*  Animacion de carga  */
+
+.barra-carga {
+  width: 50%;
+  height: 10px;
+  background-color: #585858;
+  border-radius: 50px;
+}
+
+.barra-progreso {
+  width: 0%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: width 0.5s ease-in-out;
+  border-radius: 50px;
+}
+
+.contenedor-carga {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenido {
+  display: none;
+}
+
+@keyframes llenar {
+  0% {
+    width: 0%;
+  }
+  40% {
+    width: 35%;
+  }
+  50% {
+    width: 40%;
+  }
+  60% {
+    width: 45%;
+  }
+  70% {
+    width: 55%;
+  }
+  75% {
+    width: 60%;
+  }
+  85% {
+    width: 65%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.barra-progreso.llena {
+  animation: llenar 1s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contenido.aparecer {
+  animation: aparecer 1.4s ease-in-out forwards;
+}
+
+.contenedor-carga.desaparecer {
+  animation: desaparecer 1s ease-in-out forwards;
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.contenido {
+  background-image: url("https://www.altium.com/documentation/sites/default/files/wiki_attachments/296865/Design1a.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Estilos de la portada */
+.portada {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.texto-portada {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.texto-portada > div {
+  width: 60%;
+}
+.foto-portada {
+  border-radius: 5px;
+  width: 40%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+}
+.boton-portada {
+  transform: translate(0px, -100px);
+}
+
+.boton-portada a span {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.5s;
+  animation-name: mover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mover {
+  0% {
+    transform: translate(0px, 50px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 50px);
+  }
+}
+
+.texto-portada h1 {
+  color: #fff;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  position: absolute;
+  margin: auto;
+  width: 30%;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  transform: translatey(50px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  user-select: none;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 10px;
+}
+
+article {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1px 10px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+
+nav ul a li {
+  margin-left: 10px;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos del contenido principal */
+
+h1 {
+  color: #fff;
+}
+
+.timeline ul li {
+  list-style: none;
+  border: 1px solid #646464;
+  border-radius: 5px;
+  background-color: #646464;
+  color: #fff;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+  padding: 10px;
+}
+
+/* sobre-mi */
+.sobre-mi {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.sobre-mi div {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.sobre-mi div:hover {
+  background-color: #646464;
+  color: #fff;
+  box-shadow: 0 0 10px #000;
+  transition: 0.5s;
+}
+
+/* Estilos de el logo */
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Estilo formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+form input,
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #585858;
+}
+
+form textarea:focus {
+  outline: none;
+  border-color: #585858;
+}
+
+form button {
+  color: #333;
+  cursor: pointer;
+}
+
+form button:hover {
+  outline: none;
+  border-color: #585858;
+  background-color: #585858;
+  color: #fff;
+  transition: 0.5s;
+}
+
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contacto {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+}
+.contacto h1 {
+  color: #fff;
+}
+
+.contacto div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contacto div input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Estilos del pie de página */
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a img {
+  width: auto;
+}
