@@ -726,3 +726,26 @@ footer a {
 footer a img {
   width: auto;
 }
+
+.CV ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.CV li {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.CV li:hover {
+  background-color: #646464;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.CV ul a {
+  color: #fff;
+  text-decoration: none;
+}
